@@ -24,7 +24,7 @@ const cards: CardProps[] = [
   {
     title: 'Reward your communnity using POAPs',
     description: "",
-    image: '/logo.png',
+    image: '/people.png',
     button: 'View Digital Scratchable',
     color: '#D1EAFA',
     url: '/poaps'
@@ -32,7 +32,7 @@ const cards: CardProps[] = [
   {
     title: 'Integration of Phala Network',
     description: "Leveraging Phala Network's capabilities.",
-    image: '/logo.png',
+    image: '/phala.png',
     button: 'View Digital Scratchable',
     color: '#FAE5D1',
     url: '/phala'
