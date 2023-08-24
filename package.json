@@ -1,0 +1,21 @@
+{
+  "name": "dereward.xyz",
+  "version": "1.0.0",
+  "description": "Breakthrough protocol using digital scratchable cards and Phala Network.",
+  "scripts": {
+    "dev": "pnpm -r run dev"
+  },
+  "keywords": [],
+  "author": "DeReward",
+  "contributors": [
+    {
+      "name": "Saul Garcia Cespedes",
+      "github": "https://github.com/saugardev"
+    },
+    {
+      "name": "Chris Mata Iñiguez",
+      "github": "https://github.com/protocolwhisper"
+    }
+  ],
+  "license": "MIT"
+}
