@@ -1,5 +1,6 @@
 import Blog from "./components/Blog";
 import Card, { CardProps } from "./components/Card";
+import FAQ from "./components/FAQ";
 import Hero from "./components/Hero";
 import Roadmap from "./components/Roadmap";
 
@@ -49,6 +50,7 @@ export default function Home() {
       </div>
       <Roadmap />
       <Blog />
+      <FAQ/>
     </div>
   )
 }
