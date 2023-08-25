@@ -9,21 +9,21 @@ import { useEffect, useRef, useState } from 'react';
 
 const milestones = [
   {
-    title: 'Discover',
+    title: 'Idea',
     description: 'Brainstorming sessions in order to take their needs and company goals into account. Define the scope and objectives of the project and lays a fundamental foundation for everything that comes after.',
     color: '#E7E0EB'
   },
   {
-    title: 'Discover',
+    title: 'Development',
     description: 'Brainstorming sessions in order to take their needs and company goals into account. Define the scope and objectives of the project and lays a fundamental foundation for everything that comes after.',
     color: '#DFEFD7'},
   {
-    title: 'Discover',
+    title: 'DeReward v1',
     description: 'Brainstorming sessions in order to take their needs and company goals into account. Define the scope and objectives of the project and lays a fundamental foundation for everything that comes after.',
     color: '#D1EAFA',
   },
   {
-    title: 'Discover',
+    title: 'DeReward v2',
     description: 'Brainstorming sessions in order to take their needs and company goals into account. Define the scope and objectives of the project and lays a fundamental foundation for everything that comes after.',
     color: '#FAE5D1'
   },

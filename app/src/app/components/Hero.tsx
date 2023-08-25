@@ -1,5 +1,8 @@
 import Image from 'next/image'
 
+import { CubeTransparentIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+
 export default function Hero() {
   return (
     <div>
@@ -20,12 +23,12 @@ export default function Hero() {
               Creating a breakthrough protocol using digital scratchable cards and Phala Network.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-              <a
+              <Link
                 href="#"
-                className="mx-auto lg:mx-0 rounded-full transition-all px-5 hover:px-7 focus-visible:px-7 py-4 text-md text-white shadow-sm bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-700"
+                className="flex items-center mx-auto lg:mx-0 rounded-full transition-all px-5 hover:px-7 focus-visible:px-7 py-4 text-md text-white shadow-sm bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-700"
               >
-                CTA Button
-              </a>
+                <span>Try it out</span>  <CubeTransparentIcon className='ml-2 h-6 w-6 transition-all fill-stone-700'/>
+              </Link>
             </div>
           </div>
           <Image
@@ -38,7 +41,7 @@ export default function Hero() {
         </div>
       </div>
       <div
-          className="absolute inset-x-0 top-[calc(20%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(40%-30rem)]"
+          className="absolute inset-x-0 top-[calc(55%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(57%-30rem)]"
           aria-hidden="true"
         >
         <div

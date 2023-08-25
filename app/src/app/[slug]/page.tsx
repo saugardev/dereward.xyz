@@ -71,7 +71,9 @@ export default function Article({ params } :any) {
         <article className='!max-w-full prose prose-md lg:prose-lg prose-stone lg:mx-0 mx-auto w-full p-0'>
           <h1 className='scroll-m-20 text-5xl font-bold tracking-tight'>{props.frontMatter.title}</h1>
           <AnimatedContent>
-            <MDXRemote source={props.content} options={options}/>
+            <div className='max-w-5xl'>
+              <MDXRemote source={props.content} options={options}/>
+            </div>
           </AnimatedContent>
         </article>
       </div>

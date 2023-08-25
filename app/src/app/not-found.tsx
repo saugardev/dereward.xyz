@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function NotFoundPage() {
   return (
@@ -20,12 +21,12 @@ export default function NotFoundPage() {
               We&apos;re sorry, the page you&apos;re looking for cannot be found.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-              <a
+              <Link
                 href="/"
                 className="mx-auto lg:mx-0 rounded-full transition-all px-5 hover:px-7 focus-visible:px-7 py-4 text-md text-white shadow-sm bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-700"
               >
                 Return Home
-              </a>
+              </Link>
             </div>
           </div>
           <Image
