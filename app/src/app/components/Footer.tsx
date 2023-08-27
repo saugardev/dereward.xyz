@@ -17,8 +17,8 @@ const props = {
 export default function Footer() {
   return (
     <AnimatedContent>
-      <footer className="text-crudo flex flex-col justify-between mx-auto rounded-[3rem] w-full max-w-7xl px-6 lg:flex lg:px-10 pt-16 pb-8 bg-stone-800 my-10 mb-20">
-        <div className="flex pb-9">
+      <footer className="text-crudo flex flex-col justify-between mx-auto rounded-[3rem] w-full max-w-7xl px-6 lg:flex lg:px-10 pb-8 bg-stone-800 my-10 mb-20">
+        {/* <div className="flex pb-9 pt-16">
           <div className="flex flex-col w-1/2">
             <h2 className="mt-4 text-4xl sm:text-5xl">Ready to use DeReward?</h2>
             <p className="mt-10 text-2xl leading-8 opacity-80">Get in touch with us</p>
@@ -28,7 +28,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="flex justify-between mx-auto mt-10 w-full max-w-7xl lg:flex">
           <div className="flex flex-col">
             <Logo />

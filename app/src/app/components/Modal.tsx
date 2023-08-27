@@ -33,7 +33,7 @@ export function DemoModal({ isOpen, setIsOpen }: ModalProps) {
 						<motion.div
 							initial={{ opacity: 0, y: 30 }}
 							animate={{ opacity: 1, y: 0 }}
-							exit={{ opacity: 0, y: -30 }}
+							exit={{ opacity: 0, y: 30 }}
 							className="sticky top-20"
 						>
 							<div className="flex justify-between mx-auto rounded-[3rem] w-full max-w-7xl px-6 lg:flex lg:px-10 py-16 bg-stone-700">

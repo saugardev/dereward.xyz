@@ -38,8 +38,8 @@ export default function NotFoundPage() {
           />
         </div>
       </div>
-            <div
-          className="absolute inset-x-0 top-[calc(20%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(40%-30rem)]"
+      <div
+          className="absolute inset-x-0 top-[calc(55%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(57%-30rem)]"
           aria-hidden="true"
         >
         <div
