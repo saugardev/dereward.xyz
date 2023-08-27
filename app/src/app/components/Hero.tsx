@@ -1,9 +1,15 @@
+'use client'
+
 import Image from 'next/image'
 
 import { CubeTransparentIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { useState } from 'react';
+import { DemoModal } from './Modal';
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div>
       <div className="relative isolate overflow-hidden">
@@ -23,12 +29,12 @@ export default function Hero() {
               Creating a breakthrough protocol using digital scratchable cards and Phala Network.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-              <Link
-                href="#"
+              <button
+                onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center mx-auto lg:mx-0 rounded-full transition-all px-5 hover:px-7 focus-visible:px-7 py-4 text-md text-white shadow-sm bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-700"
               >
                 <span>Try it out</span>  <CubeTransparentIcon className='ml-2 h-6 w-6 transition-all fill-stone-700'/>
-              </Link>
+              </button>
             </div>
           </div>
           <Image
@@ -52,6 +58,7 @@ export default function Hero() {
           }}
         />
       </div>
+      <DemoModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
     </div>
   )

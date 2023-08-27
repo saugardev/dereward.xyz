@@ -1,3 +1,150 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scratch-card {
+  position: relative;
+  border: 4px solid #c7c6cf;
+  border-radius: 8px;
+  padding: 12px;
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+}
+
+.scratch-card-cover-container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  filter: url('#remove-black');
+  transition: opacity .4s;
+
+  &.clear {
+    opacity: 0;
+  }
+  
+  &.hidden {
+    display: none;
+  }
+}
+
+.scratch-card-canvas {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+  
+  &.hidden {
+    opacity: 0;
+  }
+  
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.scratch-card-canvas-render {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color .2s;
+  
+  &.hidden {
+    display: none;
+  }
+}
+
+.scratch-card-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cfced6;
+  background-image: linear-gradient(to right, #cfced6, #e0dfe6, #efeef3, #e0dfe6, #cfced6);
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, transparent 40%, rgb(255 255 255 / .8) 50%, transparent 60%);
+    background-position: bottom right;
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+    
+    @at-root .scratch-card-cover.shine::before {
+      animation: 
+        shine 8s infinite,
+      ;
+    }
+  }
+  
+  @keyframes shine {
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: -50% -50%;
+    }
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+    filter: url('#noise');
+  }
+}
+
+.scratch-card-cover-background {
+  width: 100%;
+  height: 100%;
+  fill: #555;
+  opacity: .1;
+}
+
+.scratch-card-image {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 4px rgb(0 0 0 / .16));
+  user-select: none;
+  will-change: transform;
+  
+  &.animate {
+    animation: pop-out-in cubic-bezier(.65, 1.35, .5, 1) 1s;
+  }
+}
+
+@keyframes pop-out-in {
+  36% {
+    transform: scale(1.125);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

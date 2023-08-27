@@ -1,92 +1,114 @@
-'use client'
+import { Dialog } from "@headlessui/react"
+import { motion, AnimatePresence } from "framer-motion"
+import ScratchCard from "./ScratchCard"
 
-import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
-
-interface ContentProps {
-  modal: boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+type ModalProps = {
+	isOpen: boolean
+	setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-function Content({ modal, setModal }: ContentProps) {
-  return (
-    <motion.div
-      animate={{
-        opacity: modal ? 0.5 : 1
-      }}
-      transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-    >
-      <h2 className="text-4xl capitalize">hello there</h2>
-      <button
-        className="bg-indigo-600 my-3 text-white uppercase text-sm px-4 h-10 rounded"
-        onClick={() => setModal((modal) => !modal)}
-      >
-        {modal ? "Close modal" : "Show modal"}
-      </button>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-      </p>
-    </motion.div>
-  );
-}
+export function DemoModal({ isOpen, setIsOpen }: ModalProps) {
+	return (
+		<AnimatePresence>
+			{isOpen && (
+				<Dialog
+					open={isOpen}
+					onClose={setIsOpen}
+					as="div"
+					className="fixed inset-0 z-10 flex items-center justify-center overflow-y-auto"
+				>
+					<div className="flex flex-col py-8 px-4 text-center">
+						<Dialog.Overlay />
+						<div
+							className="fixed inset-0 transition-opacity"
+							aria-hidden="true"
+						>
+							<div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+						</div>
 
-interface ModalProps {
-  modal: boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
-}
+						<motion.div
+							className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+							exit={{opacity: 0, y: 30}}
+						>
+							<span
+								className="hidden sm:inline-block sm:align-middle sm:h-screen"
+								aria-hidden="true"
+							>
+								&#8203;
+							</span>
 
-function AnimatedModal({ modal, setModal }: ModalProps) {
-  return (
-    <AnimatePresence>
-      {modal && (
-        <div className="px-5 fixed h-full w-full flex items-center justify-center top-0 left-0">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{
-              y: 0,
-              opacity: 1
-            }}
-            exit={{
-              y: -50,
-              opacity: 0
-            }}
-            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="absolute z-10 p-5 bg-indigo-600 h-auto w-full max-w-md rounded text-white"
-          >
-            <button
-              onClick={() => setModal((modal) => !modal)}
-              className="absolute top-0 right-0 -mt-4 -mr-4 bg-white text-indigo-600 border border-indigo-600 h-8 w-8 block mb-2 rounded-full"
-            >
-              &times;
-            </button>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1
-            }}
-            exit={{
-              opacity: 0
-            }}
-            transition={{ type: "spring", bounce: 0, duration: 0.2 }}
-            onClick={() => setModal((modal) => !modal)}
-            className="bg-transparent px-5 fixed h-full w-full flex items-center justify-center top-0 left-0"
-          />
-        </div>
-      )}
-    </AnimatePresence>
-  );
-}
-
-export default function Modal() {
-  const [modal, setModal] = React.useState(false);
-  return (
-    <div className="container mx-auto p-8">
-      <Content {...{ modal, setModal }} />
-      <AnimatedModal {...{ modal, setModal }} />
-    </div>
-  );
+							<div
+								className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+								role="dialog"
+								aria-modal="true"
+								aria-labelledby="modal-headline"
+							>
+								<div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+									<div className="sm:flex sm:items-start">
+										<div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+											<svg
+												className="h-6 w-6 text-red-600"
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												stroke="currentColor"
+												aria-hidden="true"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													strokeWidth="2"
+													d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+												/>
+											</svg>
+										</div>
+										<div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+											<Dialog.Title
+												as="h3"
+												className="text-lg leading-6 font-medium text-gray-900"
+												id="modal-headline"
+											>
+												Deactivate account
+											</Dialog.Title>
+											<div className="mt-2">
+												<Dialog.Description
+													as="p"
+													className="text-sm text-gray-500"
+												>
+													Are you sure you want to deactivate your account? All
+													of your data will be permanently removed. This action
+													cannot be undone.
+												</Dialog.Description>
+                          <ScratchCard imageSrc='/logo.png' text='Hello World'/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+									<button
+										type="button"
+										tabIndex={0}
+										className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+										onClick={() => setIsOpen(false)}
+									>
+										Deactivate
+									</button>
+									<button
+										type="button"
+										tabIndex={0}
+										className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+										onClick={() => setIsOpen(false)}
+									>
+										Cancel
+									</button>
+								</div>
+							</div>
+						</motion.div>
+					</div>
+				</Dialog>
+			)}
+		</AnimatePresence>
+	)
 }
