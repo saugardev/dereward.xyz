@@ -93,7 +93,7 @@ export class ScratchModule {
           y: (this.scratchCardText.getBoundingClientRect().bottom + 60) / window.innerHeight,
         },
       });
-      this.scratchCardText.textContent = '🎉 You got a $50 Apple gift card!';
+      this.scratchCardText.textContent = '';
       this.scratchCardImage.classList.add('animate');
       this.scratchCardCoverContainer.addEventListener('transitionend', () => {
         this.scratchCardCoverContainer.classList.add('hidden');

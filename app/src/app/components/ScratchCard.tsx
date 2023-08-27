@@ -3,10 +3,9 @@ import { ScratchModule } from '@/lib/ScratchCard';
 
 interface ScratchCardProps {
   imageSrc: string;
-  text: string;
 }
 
-const ScratchCard = ({ imageSrc, text }: ScratchCardProps) => {
+const ScratchCard = ({ imageSrc }: ScratchCardProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const ScratchCard = ({ imageSrc, text }: ScratchCardProps) => {
         </div>
       </div>
       <img className="scratch-card-image" src={imageSrc} alt="Scratch Card" />
-      <p className="scratch-card-text">{text}</p>
+      <p className="scratch-card-text"></p>
     </div>
   );
 };
