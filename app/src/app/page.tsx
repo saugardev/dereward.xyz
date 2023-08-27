@@ -49,8 +49,8 @@ export default function Home() {
         ))}
       </div>
       <Roadmap />
-      <Blog />
-      <FAQ/>
+      {/* <Blog />
+      <FAQ/> */}
     </div>
   )
 }

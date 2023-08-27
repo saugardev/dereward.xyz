@@ -23,7 +23,7 @@ export default function Hero() {
               </div>
             </div>
             <h1 className="mt-4 text-4xl text-stone-700 sm:text-6xl">
-              Landing page title for the Phala Network Hackathon
+              The Future of Digital Incentives is Here
             </h1>
             <p className="mt-10 text-2xl leading-8 text-stone-500">
               Creating a breakthrough protocol using digital scratchable cards and Phala Network.
