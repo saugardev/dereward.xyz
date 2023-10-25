@@ -16,7 +16,7 @@ export function DemoModal({ isOpen, setIsOpen }: ModalProps) {
 			{isOpen && (
 				<Dialog
 					open={isOpen}
-					onClose={setIsOpen}
+					onClose={() => {}}
 					as="div"
 					className="fixed inset-0 z-10 flex items-center justify-center overflow-y-auto"
 				>
