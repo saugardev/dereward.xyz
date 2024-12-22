@@ -1,7 +1,7 @@
 {
-  "name": "dereward.xyz",
+  "name": "scratch-concept",
   "version": "1.0.0",
-  "description": "Breakthrough protocol using digital scratchable cards and Phala Network.",
+  "description": "Breakthrough protocol using digital scratchable cards and Blockchain.",
   "scripts": {
     "dev": "pnpm -r run dev"
   },
@@ -11,10 +11,6 @@
     {
       "name": "Saul Garcia Cespedes",
       "github": "https://github.com/saugardev"
-    },
-    {
-      "name": "Chris Mata Iñiguez",
-      "github": "https://github.com/protocolwhisper"
     }
   ],
   "license": "MIT"

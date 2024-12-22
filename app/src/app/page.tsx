@@ -30,8 +30,8 @@ const cards: CardProps[] = [
     url: '/poaps'
   },
   {
-    title: 'Integration of Phala Network',
-    description: "Leveraging Phala Network's capabilities.",
+    title: 'Integration of Blockchain',
+    description: "Leveraging Blockchain's capabilities.",
     image: '/phala.png',
     button: 'View Digital Scratchable',
     color: '#FAE5D1',

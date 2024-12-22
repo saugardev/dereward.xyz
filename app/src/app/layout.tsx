@@ -7,8 +7,8 @@ import Footer from './components/Footer'
 const font = Hanken_Grotesk({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'DeReward',
-  description: 'Breakthrough protocol using digital scratchable cards and Phala Networ',
+  title: 'Scratch',
+  description: 'Breakthrough protocol using digital scratchable cards and Blockchain',
 }
 
 export default function RootLayout({

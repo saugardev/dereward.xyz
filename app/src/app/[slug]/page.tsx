@@ -59,7 +59,7 @@ export async function generateMetadata({ params } : any) {
     description: article.frontMatter.description,
     keywords: article.frontMatter.keywords,
     authors: [{name: article.frontMatter.author, url: article.frontMatter.authorURL}],
-    applicationName: 'phalahackathon.something'
+    applicationName: 'blockchain.something'
   }
 }
 

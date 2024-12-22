@@ -1,6 +1,6 @@
 # dereward.xyz
 
-Breakthrough protocol using digital scratchable cards and Phala Network.
+Breakthrough protocol using digital scratchable cards and Blockchain.
 
 ## Getting Started
 

@@ -10,22 +10,22 @@ import { useEffect, useRef, useState } from 'react';
 const milestones = [
   {
     title: 'Idea',
-    description: 'The genesis of DeReward. A series of brainstorming sessions that evaluated market needs, gauging company objectives, and laying the fundamental blueprint for our ambitious project.',
+    description: 'The genesis of Scratch. A series of brainstorming sessions that evaluated market needs, gauging company objectives, and laying the fundamental blueprint for our ambitious project.',
     color: '#E7E0EB'
   },
   {
     title: 'Development',
-    description: 'Turning vision into reality. Our team embarks on crafting the prototype, establishing the tech stack, and setting the groundwork for the first iteration of DeReward.',
+    description: 'Turning vision into reality. Our team embarks on crafting the prototype, establishing the tech stack, and setting the groundwork for the first iteration of Scratch.',
     color: '#DFEFD7'
   },
   {
-    title: 'DeReward v1',
-    description: 'Our maiden launch! Introducing DeReward v1, featuring digital scratchable cards, a user-friendly interface, and the first layer of integration with the Phala Network.',
+    title: 'Scratch v1',
+    description: 'Our maiden launch! Introducing Scratch v1, featuring digital scratchable cards, a user-friendly interface, and the first layer of integration with the Blockchain.',
     color: '#D1EAFA',
   },
   {
-    title: 'DeReward v2',
-    description: 'The evolution continues. With enhanced features, refined UX/UI, and deeper Phala Network integration, DeReward v2 sets new industry standards for digital rewards.',
+    title: 'Scratch v2',
+    description: 'The evolution continues. With enhanced features, refined UX/UI, and deeper Blockchain integration, Scratch v2 sets new industry standards for digital rewards.',
     color: '#FAE5D1'
   },
 ]

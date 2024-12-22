@@ -23,10 +23,10 @@ export default function Hero() {
               </div>
             </div>
             <h1 className="mt-4 text-4xl text-stone-700 sm:text-6xl">
-              Creating Walletless Digital Incentives is Here
+              Creating Scratchable Rewards
             </h1>
             <p className="mt-10 text-2xl leading-8 text-stone-500">
-              A breakthrough protocol using digital scratchable cards and Phala Network.
+              A breakthrough protocol using digital scratchable cards and Blockchain.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <button
